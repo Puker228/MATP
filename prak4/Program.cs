@@ -8,9 +8,7 @@ namespace Prak4
         static void Main()
         {
             List<int> llist = new List<int>();
-            int listLen;
-            int listNum;
-            int listDel;
+            int listLen, listNum, listDel;
             
             while (true)
             {
