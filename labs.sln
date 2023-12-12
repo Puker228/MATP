@@ -12,9 +12,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab5", "lab5\lab5.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab6", "lab6\lab6.csproj", "{269DE899-CC7E-4836-AA94-0351B2B60CBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prak4", "prak4\prak4.csproj", "{5703B288-A438-4B76-94A2-CE6BFB811116}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prak4.1", "prak4.1\prak4.1.csproj", "{5703B288-A438-4B76-94A2-CE6BFB811116}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab7", "lab7\lab7.csproj", "{5B75F1C0-9798-40EA-A1D2-51252959C146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prak4.2", "prak4.2\prak4.2.csproj", "{23E89FE4-6A6C-46FE-8123-6A5758F9C3D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListExample", "LinkedListExample\LinkedListExample.csproj", "{0382FE3E-5A75-4272-ACF8-6F8142D8467D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,5 +58,13 @@ Global
 		{5B75F1C0-9798-40EA-A1D2-51252959C146}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B75F1C0-9798-40EA-A1D2-51252959C146}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B75F1C0-9798-40EA-A1D2-51252959C146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E89FE4-6A6C-46FE-8123-6A5758F9C3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E89FE4-6A6C-46FE-8123-6A5758F9C3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E89FE4-6A6C-46FE-8123-6A5758F9C3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E89FE4-6A6C-46FE-8123-6A5758F9C3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0382FE3E-5A75-4272-ACF8-6F8142D8467D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0382FE3E-5A75-4272-ACF8-6F8142D8467D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0382FE3E-5A75-4272-ACF8-6F8142D8467D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0382FE3E-5A75-4272-ACF8-6F8142D8467D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
