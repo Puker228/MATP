@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "LinkedListExample/1.0.0": {
+      "lab7/1.0.0": {
         "runtime": {
-          "LinkedListExample.dll": {}
+          "lab7.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "LinkedListExample/1.0.0": {
+    "lab7/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
