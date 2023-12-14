@@ -27,6 +27,7 @@ namespace prak4_2
                 {
                     case 1:
                         list = new DoublyLinkedList();
+                        list.AddElementsFromInput();
                         Console.WriteLine("Список создан");
                         break;
                     case 2:
@@ -73,7 +74,42 @@ namespace prak4_2
     class DoublyLinkedList
     {
         private Node head;
+        
+        
+        public void AddElementsFromInput()
+        {
+            Console.Write("Введите количество элементов: ");
+            int count = Convert.ToInt32(Console.ReadLine());
 
+            for (int i = 0; i < count; i++)
+            {
+                Console.Write("\nВведите значение элемента: ");
+                int value = Convert.ToInt32(Console.ReadLine());
+                Node newNode = new Node();
+                newNode.data = value;
+                newNode.next = null;
+
+                if (head == null)
+                {
+                    newNode.prev = null;
+                    head = newNode;
+                }
+                else
+                {
+                    Node lastNode = head;
+                    while (lastNode.next != null)
+                    {
+                        lastNode = lastNode.next;
+                    }
+
+                    lastNode.next = newNode;
+                    newNode.prev = lastNode;
+                }
+            }
+        }
+
+        
+        
         public void AddToEnd(int data)
         {
             Node newNode = new Node();
