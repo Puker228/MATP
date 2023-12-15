@@ -16,7 +16,7 @@ namespace Prak4_1
                 Console.WriteLine("1 - Создать список");
                 Console.WriteLine("2 - Добавить элемент в список(2)");
                 Console.WriteLine("3 - Удалить элемент из списка");
-                Console.WriteLine("4 - Вывести список");
+                Console.WriteLine("4 - Вывести список(2)");
                 Console.WriteLine("5 - Уничтожить список");
                 Console.WriteLine("6 - Выйти");
 
@@ -67,13 +67,27 @@ namespace Prak4_1
                         break;
                         
                     case "4" :
-                        foreach (var i in llist)
+                        Console.WriteLine("1 - Вывести весь список");
+                        Console.WriteLine("2 - Вывести элемент из списка");
+                        
+                        int inChoice4 = Convert.ToInt32(Console.ReadLine());
+                        switch (inChoice4)
                         {
-                            Console.Write($"{i} ");
+                            case 1:
+                                foreach (var i in llist)
+                                {
+                                    Console.Write($"{i} ");
+                                }
+                                Console.WriteLine();
+                                break;
+                            case 2:
+                                Console.Write("Индекс элемента: ");
+                                listNum = Convert.ToInt32(Console.ReadLine()) - 1;
+                                Console.WriteLine($"{llist[listNum]}");
+                                break;
                         }
-                        Console.WriteLine();
                         break;
-                    
+                        
                     case "5":
                         llist.Clear();
                         Console.WriteLine("\nСписок обнулен");

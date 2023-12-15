@@ -8,15 +8,15 @@ namespace prak4_2
         {
             DoublyLinkedList list = null;
             int choice;
-            List<int> sub_list = new List<int>();
             
-            do
+            while (true)
             {
+                Console.WriteLine("Выберите действие");
                 Console.WriteLine("1 - Создать список");
                 Console.WriteLine("2 - Добавить в конец списка");
                 Console.WriteLine("3 - Добавить в произвольное место");
                 Console.WriteLine("4 - Удалить элемент из списка");
-                Console.WriteLine("5 - Вывести список");
+                Console.WriteLine("5 - Вывести список(2)");
                 Console.WriteLine("6 - Уничтожить список");
                 Console.WriteLine("7 - Выйти");
                 
@@ -48,19 +48,33 @@ namespace prak4_2
                         list.Delete(deletePosition);
                         break;
                     case 5:
-                        list.Read();
+                        Console.WriteLine("1 - Вывести весь список");
+                        Console.WriteLine("2 - Вывести элемент по индексу");
+                        
+                        Console.Write("Действие: ");
+                        int inChoice5 = Convert.ToInt32(Console.ReadLine());
+                        switch (inChoice5)
+                        {
+                            case 1:
+                                list.ReadAll();
+                                break;
+                            case 2:
+                                Console.Write("Индекс: ");
+                                int w = Convert.ToInt32(Console.ReadLine());
+                                list.ReadAtIndex(w);
+                                break;
+                        }
                         break;
                     case 6:
                         list = null;
                         break;
                     case 7:
-                        Environment.Exit(0);
-                        break;
+                        return;
                     default:
                         Console.WriteLine("Нет такого выбора");
                         break;
                 }
-            } while (choice != 7);
+            } 
         }
     }
 
@@ -85,16 +99,15 @@ namespace prak4_2
             {
                 Console.Write("\nВведите значение элемента: ");
                 int value = Convert.ToInt32(Console.ReadLine());
-                Node newNode = new Node();
-                newNode.data = value;
-                newNode.next = null;
-
-                if (head == null)
+                Node newNode = new Node(); 
+                newNode.data = value; 
+                newNode.next = null; 
+                if (head == null) 
                 {
                     newNode.prev = null;
                     head = newNode;
                 }
-                else
+                else 
                 {
                     Node lastNode = head;
                     while (lastNode.next != null)
@@ -122,12 +135,12 @@ namespace prak4_2
             else
             {
                 Node lastNode = head;
-                while (lastNode.next != null)
+                while (lastNode.next != null) 
                 {
                     lastNode = lastNode.next;
                 }
-                lastNode.next = newNode;
-                newNode.prev = lastNode;
+                lastNode.next = newNode; 
+                newNode.prev = lastNode; 
             }
         }
 
@@ -176,7 +189,7 @@ namespace prak4_2
             }
         }
 
-        public void Read()
+        public void ReadAll()
         {
             Node current = head;
             while (current != null)
@@ -186,5 +199,28 @@ namespace prak4_2
             }
             Console.WriteLine();
         }
+        
+        public void ReadAtIndex(int index)
+        {
+            Node current = head;
+            for (int i = 1; i < index; i++)
+            {
+                if (current == null)
+                {
+                    Console.WriteLine("Нет элемента по индексу");
+                    return;
+                }
+                current = current.next;
+            }
+            if (current != null)
+            {
+                Console.WriteLine("Элемент: " + current.data);
+            }
+            else
+            {
+                Console.WriteLine("Нет элемента по индексу");
+            }
+        }
+
     }
 }
