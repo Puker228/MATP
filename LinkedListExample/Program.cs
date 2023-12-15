@@ -7,7 +7,6 @@ namespace prak4_2
         static void Main()
         {
             DoublyLinkedList list = null;
-            int choice;
             
             while (true)
             {
@@ -21,7 +20,7 @@ namespace prak4_2
                 Console.WriteLine("7 - Выйти");
                 
                 Console.Write("Действие: ");
-                choice = Convert.ToInt32(Console.ReadLine());
+                int choice = Convert.ToInt32(Console.ReadLine());
 
                 switch (choice)
                 {
@@ -158,7 +157,7 @@ namespace prak4_2
             else
             {
                 Node temp = head;
-                for (int i = 1; i < position - 1; i++)
+                for (int i = 1; i < position; i++)
                 {
                     temp = temp.next;
                 }
@@ -175,7 +174,10 @@ namespace prak4_2
             if (position == 1)
             {
                 head = head.next;
-                head.prev = null;
+                if (head != null)
+                {
+                    head.prev = null;
+                }
             }
             else
             {
@@ -184,8 +186,14 @@ namespace prak4_2
                 {
                     temp = temp.next;
                 }
-                temp.next = temp.next.next;
-                temp.next.prev = temp;
+                if (temp.next != null)
+                {
+                    temp.next = temp.next.next;
+                    if (temp.next != null)
+                    {
+                        temp.next.prev = temp;
+                    }
+                }
             }
         }
 

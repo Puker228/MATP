@@ -20,8 +20,8 @@ namespace lab7
                 else
                 {
                     new_text = main_text.Replace("hello", "");
-                    string[] puk = new_text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    foreach (var i in puk)
+                    string[] tx = new_text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (var i in tx)
                     {
                         Console.WriteLine(i);
                     }
